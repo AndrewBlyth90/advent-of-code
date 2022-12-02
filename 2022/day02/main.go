@@ -2,26 +2,6 @@ package main
 
 import "advent-of-code/helpers"
 
-// A = Rock - 1pt
-// B = Paper - 2pt
-// C = Scissors - 3pt
-
-// X = Rock - 1pt
-// Y = Paper - 2pt
-// Z = Scissors - 3pt
-
-// A X = 0pt + 3pt = 3pt
-// B X = 0pt + 1pt = 1pt
-// C X = 0pt + 2pt = 2pt
-
-// A Y = 3pt + 1pt = 4pt
-// B Y = 3pt + 2pt = 5pt
-// C Y = 3pt + 3pt = 6pt
-
-// A Z = 6pt + 2pt = 8pt
-// B Z = 6pt + 3pt = 9pt
-// C Z = 6pt + 1pt = 7pt
-
 func main() {
 	inputValues := helpers.ReadValuesFromFile("./2022/day02/input.txt")
 	partA(inputValues)
