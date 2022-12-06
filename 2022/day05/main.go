@@ -42,7 +42,7 @@ func getInputMovements(input string) [][]int {
 
 	for _, movementsLine := range inputMovementsLines {
 
-		splitMovements := strings.Split(string(movementsLine), " ")
+		splitMovements := strings.Split(movementsLine, " ")
 
 		if len(splitMovements) != 6 {
 			continue
@@ -63,11 +63,12 @@ func main() {
 	inputValues := helpers.ReadValuesFromFile("./2022/day05/input.txt")
 	stacks := buildStacks(inputValues[0])
 	movements := getInputMovements(inputValues[1])
-	day01(stacks, movements)
+	partA(stacks, movements)
+	partB(stacks, movements)
 
 }
 
-func day01(stacks []Stack, movements [][]int) {
+func partA(stacks []Stack, movements [][]int) {
 
 	for _, movement := range movements {
 		for i := 0; i < movement[0]; i++ {
@@ -89,4 +90,8 @@ func day01(stacks []Stack, movements [][]int) {
 	}
 
 	print("day05 Part A: ", sb.String())
+}
+
+func partB(stacks []Stack, movements [][]int) {
+
 }
