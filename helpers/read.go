@@ -13,7 +13,7 @@ func ReadValuesFromFile(filepath string) []string {
 		fmt.Println("Error", err)
 		os.Exit(1)
 	}
-	return strings.Split(string(contents), "\r\n")
+	return strings.Split(string(contents), "\n\n")
 }
 
 func ConvertToInts(strArr []string) (values []int) {
