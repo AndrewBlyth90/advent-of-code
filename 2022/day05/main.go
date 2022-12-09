@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func buildStacks(input string) []Stack {
+func buildStacks(input string) []helpers.Stack {
 
 	lines := strings.Split(input, "\n")
 	for i, j := 0, len(lines)-1; i < j; i, j = i+1, j-1 {
@@ -15,11 +15,11 @@ func buildStacks(input string) []Stack {
 
 	stackCounterArray := strings.Split(lines[0], "")
 
-	var stackArray []Stack
+	var stackArray []helpers.Stack
 
 	for _, stackNum := range stackCounterArray {
 		if stackNum != " " {
-			stackArray = append(stackArray, NewStack())
+			stackArray = append(stackArray, helpers.NewStack())
 		}
 	}
 
@@ -68,7 +68,7 @@ func main() {
 
 }
 
-func partA(stacks []Stack, movements [][]int) {
+func partA(stacks []helpers.Stack, movements [][]int) {
 
 	for _, movement := range movements {
 		for i := 0; i < movement[0]; i++ {
@@ -92,6 +92,6 @@ func partA(stacks []Stack, movements [][]int) {
 	print("day05 Part A: ", sb.String())
 }
 
-func partB(stacks []Stack, movements [][]int) {
+func partB(stacks []helpers.Stack, movements [][]int) {
 
 }
