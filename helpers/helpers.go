@@ -16,6 +16,13 @@ func ReadValuesFromFile(filepath string) []string {
 	return strings.Split(string(contents), "\n")
 }
 
+func AbsInt(in int) int {
+	if in < 0 {
+		return -in
+	}
+	return in
+}
+
 func ReturnStringArrayFromFIle(filepath string) []string {
 	contents, err := os.ReadFile(filepath)
 	if err != nil {
@@ -41,4 +48,12 @@ func Contains(intArray []int, singleInt int) bool {
 		}
 	}
 	return false
+}
+
+func MultiplyArray(numbers ...int) int {
+	result := 0
+	for _, number := range numbers {
+		result *= number
+	}
+	return result
 }
