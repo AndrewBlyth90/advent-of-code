@@ -51,9 +51,18 @@ func Contains(intArray []int, singleInt int) bool {
 }
 
 func MultiplyArray(numbers ...int) int {
-	result := 0
+	result := 1
 	for _, number := range numbers {
 		result *= number
 	}
 	return result
 }
+
+func SumArray(numbers ...int) int {
+	result := 0
+	for _, number := range numbers {
+		result += number
+	}
+	return result
+}
+
